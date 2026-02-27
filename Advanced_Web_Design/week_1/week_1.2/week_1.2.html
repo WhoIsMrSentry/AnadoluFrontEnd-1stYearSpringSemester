@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <!--
+                Açıklama (Türkçe):
+                - Bu dosya basit bir CSS Grid düzenini gösterir (header, sidebar, main, footer).
+                - `grid-template-areas` kullanarak alanları isimlendirdik; bu, hangi öğenin
+                    nereye yerleşeceğini görsel ve anlaşılır kılar. Yeni başlayanlar için
+                    alan adları (header, sidebar, main, footer) doğrudan CSS ile eşleştirilir.
+                - `grid-template-columns` ve `grid-template-rows` ile sabit ve esnek ölçüleri
+                    bir arada nasıl kullanabileceğinizi gösteririz (px ve fr kombinasyonu).
+                - Bu örnek demo amaçlı; gerçek projede `height: 200px` yerine içerik/uygun
+                    yükseklik ayarı tercih edilir.
+        -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* `.container` grid konteyneridir: içindeki öğeler grid hücrelerine yerleşir */
+        .container{
+            display: grid;
+            /* İki sütun: sol sabit 200px (sidebar için), sağ ise kalan alan (1fr) */
+            grid-template-columns: 200px 1fr;
+            /* Üç satır: başlık 80px, içerik esnek 1fr, footer 60px sabit */
+            grid-template-rows: 80px 1fr 60px;
+            /* area isimleri ile hangi öğe nereye yerleşeceği okunur şekilde tanımlanır */
+            grid-template-areas: 
+                "header header"
+                "sidebar main"
+                "footer footer";
+            height: 200px;    
+        }
+
+        /* header alanını belirliyoruz: grid-area değeri template ile eşleşir */
+        .header{
+            grid-area: header;
+            background: red;
+        }
+
+        /* sidebar (yan menü) için alan */
+        .aside{
+            grid-area: sidebar;
+            background: orange;
+        }
+
+        /* içerik alanı (main) burada yer alır */
+        .main{
+            grid-area: main;
+            background: lightgrey;
+        }
+
+        /* footer: tüm satırı kaplayacak şekilde ayarlandı */
+        .footer{
+            grid-area: footer;
+            background: black;
+            color: white
+        }
+        
+    </style>    
+    
+</head>
+<body>
+    <div>
+        <div class="container">
+            <header class="header">header</header>
+            <aside class="aside">sidebar</aside>
+            <main class="main">content</main>
+            <footer class="footer">footer</footer>
+        </div>
+    </div>
+    
+</body>
+</html>

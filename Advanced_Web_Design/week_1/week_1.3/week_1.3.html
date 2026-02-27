@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <!--
+                Açıklama (Türkçe):
+                - Bu küçük örnek, `display: grid` ile satır/sütun oluşturmayı ve
+                - `repeat()` ile benzer sütun/satır tekrarlarını nasıl kullanacağınızı gösterir.
+                - `gap` boşluklarının nasıl çalıştığını ve `.item` içinde hizalamanın
+                    (flex ile ortalama) nasıl yapıldığını gösterir.
+                - Yeni başlayanlar için: grid öğelerini yerleştirmek için önce konteyneri
+                    (`.container`) tanımlayın, sonra çocuk öğelere sınıflar verin.
+        -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* Basit yardımcı sınıflar: renk, font boyutu, kalınlık */
+        .bgred {
+            background-color: red; /* öğeyi kırmızı arka plan yapar */
+        }
+
+        .fontSize {
+            font-size: 20px; /* yazı boyutunu ayarlar */
+        }
+
+        .fontWh{
+            font-weight: 900; /* yazıyı kalın yapar */
+        }
+
+        /* Grid konteyneri: 3 eşit sütun ve 2 eşit satır */
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 100px); /* 3 sütun, her biri 100px */
+            grid-template-rows: repeat(2, 100px); /* 2 satır, her biri 100px */
+            gap: 10px; /* hücreler arasındaki boşluk */
+            background: #eee;
+            padding: 10px;
+        }
+
+        /* Grid içindeki öğeler: flex ile dikey/yatay ortalanmış içerik */
+        .item {
+            background-color: blue;
+            color: white;
+            font-size: 22px;
+            display: flex; /* içeriği ortalamak için flex kullanıyoruz */
+            justify-content: center; /* yatay ortala */
+            align-items: center;    /* dikey ortala */
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+
+    </div>
+
+    
+</body>
+</html>
+</html>

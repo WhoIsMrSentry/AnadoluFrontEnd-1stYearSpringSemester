@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <!--
+                Açıklama (Türkçe):
+                - Bu dosya örnek bir grid düzenini A-F bloklarıyla gösterir.
+                - Amaç: 4x4 bir grid tutup orta alanları oransal olarak ayarlamak.
+                    Örneğin `grid-template-columns: 1fr 1fr 1fr 2fr;` ile sağdaki alan
+                    (son sütun) daha geniş yapılarak C, D ve E'nin ekranı uygun şekilde
+                    doldurması sağlanır.
+                - Öğelerin atanması:
+                    A: en üst satırı kaplar (başlık benzeri)
+                    B: sol sütunu kaplar (uzun kolon)
+                    C: üst orta alanı kapsar (sağa kadar uzanır)
+                    D / E: alt orta alanı eşit şekilde paylaşır (yanyana, boşluksuz)
+                    F: en alt satırı kaplar (footer benzeri)
+                - Yeni başlayanlar için öneri: önce küçük değişikliklerle `grid-column`
+                    değerlerini deneyin, ardından `grid-template-columns`'u orantılayın.
+        -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Recreation</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+            font-family: serif; /* Matches the serif font in the image */
+        }
+
+            /* Container: 4x4 grid. Burada sütun oranları ile orta alanların
+               genişliklerini orantılı yapıyoruz. Açıklamalar yeni başlayanlar içindir. */
+            .container {
+                display: grid;
+                /* Sütun oranları:
+                   - 1fr: sol kenar dar kolonu tutar (B için)
+                   - 2fr 2fr: orta iki sütun eşit genişlikte (D ve E için)
+                   - 1fr: sağ boşluk/denge sütunu
+                   Bu oranları değiştirerek C, D, E'nin nasıl davrandığını görebilirsin. */
+                grid-template-columns: 1fr 2fr 2fr 1fr;
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+            gap: 10px;
+            background-color: #eee; /* The light grey background visible in the empty cell */
+            padding: 10px;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .item {
+            color: white;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            /* Ortak öğe stili: yazıyı ortalamak için flex kullanıyoruz */
+
+        .item.a {
+            grid-column: 1 / 5;
+            background-color: red;
+        }
+            /* A: en üst satırı kaplar (başlık benzeri) */
+
+        .item.b {
+            grid-row: 2 / 4; /* Spans across row 2 and 3 */
+            grid-column: 1 / 2;
+            background-color: green;
+        }
+            /* B: sol tarafta dikey bir kolon gibi davranır */
+
+        .item.c {
+            grid-column: 2 / 5; /* Spans columns 2-4 (sağa kadar) */
+            background-color: orange;
+        }
+            /* C: üst orta alanı kaplar, sağa kadar uzanması isteniyordu */
+
+        .item.d {
+            grid-row: 3 / 4;
+            grid-column: 2 / 4; /* D: spans columns 2-3 (1fr+1fr = 2fr) */
+            background-color: brown;
+        }
+            /* D ve E: alt orta alanda yanyana, her biri orta sütun genişliğine eşit */
+
+        .item.e {
+            grid-row: 3 / 4;
+            grid-column: 4 / 5; /* E: spans column 4 (2fr) — equals D */
+            background-color: purple;
+        }
+
+        /* The space at Row 3, Column 4 remains empty, showing the container background */
+
+        .item.f {
+            grid-column: 1 / 5;
+            background-color: black;
+        }
+            /* F: sayfanın altındaki geniş alan (footer benzeri) */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+    </div>
+</body>
+</html>
