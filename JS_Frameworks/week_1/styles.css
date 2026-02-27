@@ -1,0 +1,56 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 24px;
+	background: #f7fafc;
+	color: #1a202c;
+}
+
+main {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.controls {
+	margin: 12px 0;
+	display: flex;
+	gap: 8px;
+}
+
+input#itemInput {
+	flex: 1;
+	padding: 6px 8px;
+}
+
+button {
+	padding: 6px 10px;
+	cursor: pointer;
+}
+
+li.item {
+	padding: 6px;
+	border-bottom: 1px solid #e2e8f0;
+}
+
+.done {
+	text-decoration: line-through;
+	color: #718096;
+}
+
+.highlight {
+	background: linear-gradient(90deg, #fef3c7, #fef08a);
+	padding: 4px 8px;
+}
+
+.flash {
+	margin-top: 12px;
+	min-height: 20px;
+}
+
+.flash.warn {
+	color: #b45309;
+}
+
+.flash.info {
+	color: #065f46;
+}
+
