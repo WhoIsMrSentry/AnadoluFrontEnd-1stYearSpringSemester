@@ -1,0 +1,65 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+.kartlar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.kart {
+
+    background-color: rgb(255, 89, 0);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    background-color: #7b7b7b;
+    margin-bottom: 50px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+
+
+@media (min-width: 600px) {
+    .kartlar {
+        flex-direction: row;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .kart {
+        width: 40%;
+    }
+}
+
+
+
+@media (min-width: 900px) {
+    .kart {
+        width: 20%;
+    }
+}

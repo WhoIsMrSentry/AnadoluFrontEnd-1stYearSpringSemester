@@ -1,0 +1,59 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    background-color: #7b7b7b;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.kartlar {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.kart {
+    background-color: rgb(49, 49, 156);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 900px) {
+    .kartlar {
+        flex-wrap: wrap;
+    }
+
+    .kart {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .kart {
+        width: 100%;
+    }
+}    
