@@ -16,3 +16,5 @@ if puan >= 0 and puan <= 100:
         print("Harf Notunuz: CC")
     else:
         print("Harf Notunuz: FF")
+else:
+    print("Geçersiz not! Lütfen 0 ile 100 arasında bir değer giriniz.")        
