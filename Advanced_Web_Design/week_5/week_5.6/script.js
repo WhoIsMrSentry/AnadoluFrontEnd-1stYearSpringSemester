@@ -9,6 +9,6 @@ for (var urun of tümürünler) {
     } else {
         urun.classList.add("mevcut");
         console.log(urun.innerText, "stokta: ", stokMiktarı);
-        urun.textContent = urun.textContent + " (stokta: " + stokMiktarı + ")";
+        urun.textContent += " (stokta: " + stokMiktarı + ")";
     }
 }
