@@ -278,32 +278,30 @@
       }
 
 
-       
-
-
     /* =============================================
        GÖREV 3:
-       Ekran genişliği yalnızca 601px ile 1000px
-       arasında olduğunda şu değişiklikler gerçekleşsin:
+       Ekran genişliği 601px ile 1000px arasında olduğunda
+       aşağıdaki değişiklikler gerçekleşsin:
 
        - nav ul gap: 15px olsun
-       - Yemek kartları 2'li dizilim oluştursun
-         (ikisi yan yana, diğerleri alt satıra geçsin)
-       - .hakkimizda alt alta dizilsin,
-         .hakkimizda-fotograf genişliği %100 olsun
-       - .footer-ust 2 kolonlu olsun
+       - .menu ve .footer-ust alt alta dizilsin
+       - .yemek-karti genişliği %50 olsun
+       - .hakkimizda alt alta dizilsin
+       - .hakkimizda-fotograf genişliği full olsun
+
+       NOT: .menu ve .footer-ust için flex-wrap: wrap; ekleyerek
+       alt alta dizilmelerini sağlayabilirsiniz.
        ============================================= */
 
-       @media (min-width: 601px) and (max-width: 1000px) {
+      @media (min-width: 601px) and (max-width: 1000px) {
         nav ul { gap: 15px; }
         .menu { flex-wrap: wrap; }
-        .yemek-karti { flex: 1 1 calc(50% - 10px); }
+        .yemek-karti { flex: 1 1 50%; }
         .hakkimizda { flex-direction: column; }
         .hakkimizda-fotograf { width: 100%; }
         .footer-ust { flex-wrap: wrap; }
-        .footer-kolon { flex: 1 1 calc(50% - 20px); margin-bottom: 20px; }
-       }
-
+        .footer-kolon { flex: 1 1 50%; }
+      }
 
     /* =============================================
        GÖREV 4:

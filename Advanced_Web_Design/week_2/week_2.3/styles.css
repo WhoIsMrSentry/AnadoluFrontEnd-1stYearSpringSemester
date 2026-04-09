@@ -28,6 +28,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 15px;
+    gap: 50px;
     background-color: #7b7b7b;
     margin-bottom: 50px;
 }
