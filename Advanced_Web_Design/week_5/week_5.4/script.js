@@ -9,6 +9,7 @@ resim.setAttribute("alt", "Sentry Old Logo replaced");
 resim.setAttribute("width", "1366");
 resim.setAttribute("height", "768");
 resim.removeAttribute("width");
+console.log("Resim elemetinin yeni alt metni: ", resim.alt);
 
 var resim2 = document.getElementById("resim2");
 console.log("Resim 2 elemetinin kaynağı: ", resim2.src);

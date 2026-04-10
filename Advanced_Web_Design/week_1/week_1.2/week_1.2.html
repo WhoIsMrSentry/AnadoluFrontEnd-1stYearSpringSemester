@@ -25,10 +25,12 @@
             /* Üç satır: başlık 80px, içerik esnek 1fr, footer 60px sabit */
             grid-template-rows: 80px 1fr 60px;
             /* area isimleri ile hangi öğe nereye yerleşeceği okunur şekilde tanımlanır */
-            grid-template-areas: 
+            grid-template-areas:
                 "header header"
-                "sidebar main"
-                "footer footer";
+                "aside sidebar"
+                "footer footer"
+                "main main";
+                
             height: 200px;    
         }
 

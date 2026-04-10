@@ -9,7 +9,7 @@ console.log("Önceki kardeş: ", öncekiKardes);
 var sonrakiKardes = ortanca.nextElementSibling;
 console.log("Sonraki kardeş: ", sonrakiKardes);
 
-öncekiKardes.classList.add("vurgu");
+öncekiKardes.classList.add("vurgulu");
 
 var liste = document.getElementById("ebeveyn-liste");
 
