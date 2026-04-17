@@ -37,3 +37,6 @@ temp/
 # desktop.ini
 *.ini
 *.ico
+
+__pycache__/
+*.pyc

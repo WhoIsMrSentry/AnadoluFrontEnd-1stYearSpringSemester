@@ -1,0 +1,13 @@
+#kutu{
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+button{
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}

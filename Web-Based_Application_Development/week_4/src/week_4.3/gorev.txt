@@ -1,0 +1,5 @@
+1 | Lab raporu | 2026-04-22
+2 | Proje sunumu | 2026-04-23
+3 | Kod incelemesi | 2026-04-24
+4 | Araştırma | 2026-04-25
+5 | Son teslim | 2026-04-26
