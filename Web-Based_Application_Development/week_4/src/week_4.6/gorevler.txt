@@ -2,4 +2,5 @@
 2 | Proje sunumu | 2026-04-23
 3 | Kod incelemesi | 2026-04-24
 4 | Araştırma | 2026-04-25
-5 | Son teslim | 2026-04-26
+5 | Son teslim | 2026-04-26Bu bir deneme yazısıdır.
+Bu yazı gorevler.txt dosyasına yazılacaktır.
