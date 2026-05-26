@@ -4,5 +4,5 @@ kitaplar = [
     {"ad": "Kitap C", "yazar": "Yazar 3", "fiyat": 25},
 ]
 
-sirali = sorted (kitaplar, key=lambda x: x["fiyat"])
+sirali = sorted(kitaplar, key=lambda x: x["fiyat"])
 print(sirali)
