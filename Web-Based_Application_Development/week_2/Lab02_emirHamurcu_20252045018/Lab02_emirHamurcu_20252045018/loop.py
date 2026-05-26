@@ -23,4 +23,4 @@ while True:
         if sayi == 0:
             break
         toplam += sayi
-print(f"Girilen sayıların toplamı: {toplam}")
+        print(f"Girilen sayıların toplamı: {toplam}")
