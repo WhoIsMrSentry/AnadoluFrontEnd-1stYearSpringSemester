@@ -18,11 +18,12 @@ while True:
     print("4- İşlem özeti")
     print("5- Çıkış")
 
-    secim = input("Seçiminiz: ")
+    secim = int(input("Seçiminiz: "))
 
     if secim == "1":
         print(f"Mevcut bakiyeniz: {bakiye} TL")
         hatali_secim_sayisi = 0
+        
     elif secim == "2":
         miktar = float(input("Yatırmak istediğiniz miktarı giriniz: "))
         if miktar > 0:
@@ -33,6 +34,7 @@ while True:
         else:
             print("Lütfen pozitif bir miktar giriniz.")
         hatali_secim_sayisi = 0
+        
     elif secim == "3":
         miktar = float(input("Çekmek istediğiniz miktarı giriniz: "))
         if miktar > 0:
@@ -46,9 +48,11 @@ while True:
         else:
             print("Lütfen pozitif bir miktar giriniz.")
         hatali_secim_sayisi = 0
+        
     elif secim == "4":
         islem_ozeti_goster()
         hatali_secim_sayisi = 0
+        
     elif secim == "5":
         print("Çıkış yapılıyor. İyi günler!")
         islem_ozeti_goster()
@@ -57,6 +61,7 @@ while True:
             continue
         else:
             break
+        
     else:
         hatali_secim_sayisi += 1
         print("Geçersiz menü seçimi! Lütfen tekrar deneyin.")
